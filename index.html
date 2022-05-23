@@ -3,31 +3,52 @@
 <head>
      <meta charset="utf-8">
      <title>Пешков. Лабораторные по курсу "Интернет-программирование"</title>
+     <link rel="stylesheet" href="main.css">
 
      </head>
 
      <body>
         <header>
             
-            <div>Телефон для связи с нами 308-02-38</div>
+            <div classs="info">Телефон для связи с нами 308-02-38</div>
             <h1>Магазин гитар</h1>
          </header>
 
-          <h1>Маркет</h1> 
-          <dl>
-              <dt>Гитара обычная</dt>
-              <dd>
-                  <img src = 'git1.jpg' width="300" > <br>
-                  Это изумительная гитара, моя любимая<br>
-            Цена 5000 рублей <br>
-            <img src = 'git2.jpg' width="300" > <br>
-            Это гитара похуже, не очень люблю ее <br>
-      Цена 2500 рублей <br>
-      <img src = 'git3.jpg' width="300" > <br>
-      Об этой гитаре все фанаты мечтают с детства<br>
-Цена 50000 рублей</dd>
-
-          </dl>
+         <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Товары</a></li>
+                <li><a href="index.html">Контакты</a></li>
+                <li><a href="index.html">Доставка</a></li>
+                <li><a href="index.html">Акции</a></li>
+            </ul>
+            <div class="searchbox">
+                <input type="search" placeholder="поиск по товарам" id = 'search'>
+                <button>&#x1F50E;</button>
+               </div>
+           </nav>
+        <main>
+            <div class="card">
+                <a href="product1.html">
+                   <div class="image"><img src="git1.jpg"></div>
+                   <div class="product-name">"Гитара обычная"</div>
+                   <div class="price">5000 &#8381; за штуку</div>
+                   </a>
+            </div>
+            <div class="card">
+                <a href="product2.html">
+                   <div class="image"><img src="git2.jpg"></div>
+                   <div class="product-name">"Гитара для любителя"</div>
+                   <div class="price">2500 &#8381; за штуку</div>
+                   </a>
+            </div>
+            <div class="card">
+                <a href="product3.html">
+                   <div class="image"><img src="git3.jpg"></div>
+                   <div class="product-name">"Гитара, мечта фаната"</div>
+                   <div class="price">50000 &#8381; за штуку</div>
+                   </a>
+            </div>          
+        </main>
           <footer>
             &copy; Маркет для коллекционеров гитар
              <h1>
