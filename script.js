@@ -1,3 +1,11 @@
+let products = [
+    {href: 'product1.html', text: 'Гитара обычная', images: ['git1.jpg',"ak47.jpg", "kaka.jpg"], price: '5000 &#8381', info: 'Моя любимая гитара'},
+    {href: 'product2.html', text: 'Гитара для любителя', images: ['git2.jpg', "G55.jpg"], price:'2500 &#8381; за штуку', info: 'Так себе гитара'},
+    {href: 'product3.html', text: 'Гитара, мечта фаната',images: ['git3.jpg',"gra1.jpeg"], price: '50000 &#8381', info: 'Гитара, мечта каждого фаната' },
+ ];
+
+
+
 console.log('Всем привет)');
          console.error('Сообщение об ошибке)');
          console.warn('Сообщение предупреждение)');
@@ -53,6 +61,25 @@ else {
        menuItem.appendChild(link);
  
        menu.appendChild(menuItem);
+    }
+ }
+ function generateCard() {
+    let main = document.querySelector('main');
+    for(let i = 0; i<products.length; i++){
+       let product = document.createElement('div');
+       product.className= 'card';
+       product.innerHTML = `
+       <a href="#">
+          <div class="image"><img src="${products[i].images[0]}"></div>
+          <div class="product-name">"${products[i].text}"</div>
+          <div class="price" onmouseover="ColorPrice(this)" onmouseout="ColorPrice1(this)">${products[i].price}</div>
+          </a>
+          `;
+       product.querySelector('a').addEventListener('click', function(){
+          showProductInfo(products[i]);
+       });
+ 
+       main.appendChild(product);
     }
  }
 
